@@ -1,5 +1,6 @@
 package wrappers;
 
+import java.io.IOException;
 
 public interface Wrappers {
 
@@ -22,9 +23,10 @@ public interface Wrappers {
 		 * @param data - The data to be sent to the webelement
 		 * @author Babu - TestLeaf
 		 * @return 
+		 * @throws InterruptedException 
 		 * @throws Exception 
 		 */
-		public void enterById(String idValue, String data);
+		public void enterById(String idValue, String data) throws InterruptedException;
 		
 		/**
 		 * This method will enter the value to the text field using name attribute to locate
@@ -104,15 +106,17 @@ public interface Wrappers {
 		 * This method will click the element using link name as locator and do take snap
 		 * @param name  The link name (locator) of the element to be clicked
 		 * @author Babu - TestLeaf
+		 * @throws Exception 
 		 */
-		public void clickByLink(String name);
+		public void clickByLink(String name) throws Exception;
 		
 		/**
 		 * This method will click the element using link name as locator and do not take snap
 		 * @param name  The link name (locator) of the element to be clicked
 		 * @author Babu - TestLeaf
+		 * @throws Exception 
 		 */
-		public void clickByLinkNoSnap(String name);
+		public void clickByLinkNoSnap(String name) throws Exception;
 
 		/**
 		 * This method will click the element using xpath as locator
@@ -191,8 +195,9 @@ public interface Wrappers {
 		/**
 		 * This method will take snapshot of the browser
 		 * @author Babu - TestLeaf
+		 * @throws IOException 
 		 */
-		public void takeSnap();
+		public void takeSnap() throws IOException;
 			
 		/**
 		 * This method will close the active browser

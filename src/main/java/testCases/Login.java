@@ -1,23 +1,18 @@
 package testCases;
 
-import javax.crypto.spec.IvParameterSpec;
 
-import org.junit.Test;
 
-import wrappers.GenericWrapper;
+import org.testng.annotations.Test;
 
-public class Login extends GenericWrapper{
+import wrappers.GenericWrappers;
+
+public class Login extends GenericWrappers{
 	
 	@Test
-	public void login(){
-		/*invokeApp("chrome", "https://developer.salesforce.com/signup?d=70130000000td6N");
-		enterById("first_name", "Sarath");
-		enterById("last_name", "Kumar");		
-		enterById("email", "sarath@testleaf.com");
-		clickById("submit_btn");*/
-		
+	public void login() throws Exception{
+			
 		invokeApp("chrome", "http://leaftaps.com/opentaps");
-		enterById("username", "DemoSalesManager");
+		enterById("username1", "DemoSalesManager");
 		enterById("password", "crmsfa");
 		clickByClassName("decorativeSubmit");
 		clickByLink("CRM/SFA");
@@ -25,11 +20,7 @@ public class Login extends GenericWrapper{
 		clickByLink("Create Contact");
 		enterById("firstNameField", "Qeagle");
 		enterById("lastNameField", "Gopinath");
-		String x = getTextById("generalToNameField");
-		System.out.println(x);
-		
-		
-		//clickByClassName("decorativeSubmit");
+		clickByName("submitButton");
 		
 	}
 
