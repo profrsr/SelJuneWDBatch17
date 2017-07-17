@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test name="Leads">
+		<classes>
+			<class name="leafTaps.lead.DuplicateLead" />
+			<class name="leafTaps.lead.EditLead" />
+			<class name="leafTaps.lead.CreateLead" />
+			<class name="leafTaps.lead.DeleteLead" />
+			<class name="leafTaps.lead.MergeLead" />
+		</classes>
+	</test>
+</suite> <!-- Suite -->
