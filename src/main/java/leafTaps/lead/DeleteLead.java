@@ -8,7 +8,7 @@ import wrappers.LeafTapsWrapper;
 
 public class DeleteLead extends LeafTapsWrapper {
 
-	@Test(dependsOnMethods = "leafTaps.lead.CreateLead")
+	@Test
 	public void deleteLead() throws Exception {		
 		clickByLink("Leads");
 		clickByLink("Find Leads");
