@@ -1,13 +1,18 @@
 package leafTaps.lead;
 
+import java.io.IOException;
+
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import freemarker.core.ReturnInstruction.Return;
+import readExcel.Dp;
 import wrappers.LeafTapsWrapper;
 
 public class CreateLead extends LeafTapsWrapper{	
 
-	@Test(dataProvider = "fetchData",invocationCount=2)
+	@Test(dataProvider = "fetchData")
 	public void createLead(String cname,String fname,String lname) throws Exception{		
 		clickByLink("Leads");
 		clickByLink("Create Lead");
@@ -20,16 +25,16 @@ public class CreateLead extends LeafTapsWrapper{
 	}
 
 	@DataProvider(name = "fetchData")
-	public String[][] getData() {
-		String[][] data = new String[2][3];
-		data[0][0] = "testleaf";
-		data[0][1] = "sarath";
-		data[0][2] = "kumar";
-		data[1][0] = "testleaf";
-		data[1][1] = "gopi";
-		data[1][2] = "jaikumar";
-		return data;
+	public String[][] getData() throws InvalidFormatException, IOException {
+		Dp read = new Dp();
+		return read.readExcel();
+
+
+
+
 	}
+
+
 
 
 
