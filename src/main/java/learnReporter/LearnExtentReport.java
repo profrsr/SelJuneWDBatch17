@@ -12,7 +12,7 @@ public class LearnExtentReport {
 	public void learnReport(){
 
 		//@BeforeSuite	
-		ExtentReports extent = new ExtentReports("./report123/result.html", false);
+		ExtentReports extent = new ExtentReports("./report/result.html", false);
 
 		//@BeforeMethod	
 		ExtentTest test = extent.startTest("TC001_CreateLead", "Create a New Lead in leafTaps");

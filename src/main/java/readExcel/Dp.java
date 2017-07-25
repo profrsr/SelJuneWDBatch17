@@ -38,7 +38,7 @@ public class Dp {
 			for (int j = 0; j < columnCount; j++) {
 
 				XSSFCell cell = row.getCell(j);
-				System.out.println(cell.getStringCellValue());
+			//	System.out.println(cell.getStringCellValue());
 				
 				data[i-1][j] = cell.getStringCellValue();
 
