@@ -23,13 +23,6 @@ public class DragAndDrop {
 		WebElement droppable = driver.findElementById("droppable");
 		
 		Actions builder = new Actions(driver);
-		builder.dragAndDrop(draggable, droppable).perform();
-		
-		
-		
-		
-		
-		
+		builder.dragAndDrop(draggable, droppable).perform();		
 	}
-
 }
